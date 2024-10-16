@@ -9,19 +9,3 @@ export interface Investor {
   totalAmount: string;
 }
 
-export interface InvestorData {
-  commitments: Commitment[];
-  commitmentsInfo: CommitmentsInfo[];
-}
-
-export interface Commitment {
-  type: string;
-  total: string;
-}
-
-export interface CommitmentsInfo {
-  id: number;
-  assetName: string;
-  currency: string;
-  totalAmount: string;
-}

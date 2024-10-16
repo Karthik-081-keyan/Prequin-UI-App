@@ -1,5 +1,5 @@
 import React from "react";
-import { Commitment } from "../model/investor";
+import { Commitment } from "../model/commitment";
 
 type Props = {
   data: Commitment;

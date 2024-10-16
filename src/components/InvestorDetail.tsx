@@ -1,20 +1,18 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import { InvestorData } from "../model/investor";
 import AssetInfo from "./Asset";
 import CommitmentInfo from "./CommitmentInfo";
+import { CommitmentData } from "../model/commitment";
 
-type Props = {};
-
-const initialData: InvestorData = { commitments: [], commitmentsInfo: [] };
+const initialData: CommitmentData = { commitments: [], commitmentsInfo: [] };
 const InvestorDetail = () => {
   const { name } = useParams();
   const [investorDetail, setInvestorDetail] =
-    useState<InvestorData>(initialData);
+    useState<CommitmentData>(initialData);
   const [assetType, setAssetType] = useState("All");
   const getInvestorDetail = () => {
     const apiUrl = process.env.REACT_APP_API_URL; // Access environment variable
-    fetch(`${apiUrl}/api/investors/${name}/commitment`)
+    fetch(`${apiUrl}/api/commitments/${name}`)
       .then((res) => res.json())
       .then((data) => {
         setInvestorDetail(data);

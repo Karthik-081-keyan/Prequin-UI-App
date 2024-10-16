@@ -1,6 +1,6 @@
 import React from "react";
-import { CommitmentsInfo } from "../model/investor";
 import BootstrapTable from "react-bootstrap-table-next";
+import { CommitmentsInfo } from "../model/commitment";
 
 type Props = {
   info: CommitmentsInfo[];
